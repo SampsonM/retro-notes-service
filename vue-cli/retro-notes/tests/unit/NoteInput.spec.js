@@ -48,7 +48,7 @@ describe('NoteInput', () => {
     it('shows todays date in the date field', () => {
         const wrapper = shallowMount(NoteInput);
         const today = new Date();
-        const formattedDate = `${today.getFullYear()}-0${today.getMonth()+1}-${today.getDate()}`
+        const formattedDate = `${today.getFullYear()}-${new String(today.getMonth()+1).padStart(2, 0)}-${today.getDate()}`;
 
         expect(wrapper.vm.date).toBe(formattedDate);
     })
