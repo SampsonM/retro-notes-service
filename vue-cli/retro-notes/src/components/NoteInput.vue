@@ -25,11 +25,10 @@ export default {
         initialiseDate: function() {
             const today = new Date();
             const currDay = today.getDate();
-            var currMonth = today.getMonth() + 1;
-            if (currMonth < 10) { currMonth = '0' + currMonth; }
+            const currMonth = `${today.getMonth() + 1}`;
             const currYear = today.getFullYear();
 
-            this.date = `${currYear}-${currMonth}-${currDay}`
+            this.date = `${currYear}-${currMonth.padStart(2, 0)}-${currDay}`
         }
     },
     created() {

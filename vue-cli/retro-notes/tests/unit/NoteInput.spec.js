@@ -53,6 +53,4 @@ describe('NoteInput', () => {
         expect(wrapper.vm.date).toBe(formattedDate);
     })
 
-
-
 });
